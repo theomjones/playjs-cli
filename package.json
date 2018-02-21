@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "main": "cli.js",
   "license": "MIT",
-  "description": "Generate a quick js file for testing.",
+  "description": "Generate a quick js file and npm repo for testing.",
+  "repository": {
+    "url": "https://github.com/theomjones/playjs-cli"
+  },
   "author": {
     "name": "Theo",
     "email": "theomjones@gmail.com",
