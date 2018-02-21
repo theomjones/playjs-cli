@@ -11,6 +11,7 @@ function program() {
   const args = processor.filterArgs(process.argv);
   const commands = processor.filterCommands(args);
   const options = processor.filterOptions(args);
+  const versionAsked = processor.getVersion(args);
   return {
     getFilePath() {
       this.path = processor.getPath(args);
@@ -23,12 +24,15 @@ function program() {
     get fullPath() {
       return this.path + "/" + this.fileName;
     },
+    get version () {
+      return '0.1.0'
+    },
     writeFile() {
       if (!this.fileName || !this.path) {
         this.path = "/Users/Theo/Desktop/playground";
         this.fileName = "playground.js";
       }
-
+      if (versionAsked) return console.log(this.version)
       fs.mkdir(this.path, err => {
         fs.writeFile(
           `${this.path}/${this.fileName}`,

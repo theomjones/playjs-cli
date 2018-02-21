@@ -12,6 +12,18 @@ module.exports = {
     return args.filter(arg => arg.charAt(0) !== "-");
   },
 
+  getVersion (args) {
+    let version = null
+    args.forEach((arg) => {
+      if (arg === '--version' || arg === '-v') {
+        version = true
+      } else {
+        version = false
+      }
+    })
+    return version
+  },
+
   getPath(args) {
     let path = null;
     if (args.length < 1) {
