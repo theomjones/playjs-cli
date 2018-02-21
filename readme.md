@@ -1,11 +1,15 @@
 # Easily generate a playground directory for quick node.js prototyping on MacOS.
 
 ## Installation
-Might put it on NPM at some point. For now just clone & link. `yarn global add jplay` can obviously be replaced with `npm i jplay -g`.
 
-You should be able to just copy and paste the below into your shell.
 ```zsh
 yarn global add jplay
+```
+
+NPM
+
+```zsh
+npm i jplay -g
 ```
 
 ## Usage
