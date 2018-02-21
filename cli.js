@@ -36,8 +36,8 @@ function program() {
           error => {
             if (error) throw error;
             console.log(`File written @ ${this.fullPath} `);
-            exec(`open ${this.fullPath}`, err => {
-              if (err) throw err;
+            exec(`cd ${this.path} && npm init -y && open . && open ${this.fileName}`, err => {
+              if (err) console.log(err)
             });
           }
         );
