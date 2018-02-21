@@ -17,10 +17,12 @@ yarn link
 _Creates a directory on your Desktop, with NPM ready to go. Opens the directory in Finder and opens the file in your preferred editor._
 ```zsh
 playjs
+# File written @ /Users/<user>/Desktop/playground/playground.js
 ```
 
 #### With options
 _Optional arguments for filename and path to create the directory. (The last element of your path option will be the directory to create)_
 ```zsh
 playjs --path ~/your/path --file yourfilename.js
+# File written @ /Users/<user>/your/path/yourfilename.js
 ```
